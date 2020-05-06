@@ -12,10 +12,11 @@ namespace src
 {
     public partial class Form1 : Form
     {
+        private TextBox textBox1;
+        private Button button1;
         public Form1()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace src
+﻿using System;
+
+namespace src
 {
     partial class Form1
     {
@@ -31,7 +33,27 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Text = "Tuukka's test app";
+            //Text box 1 start
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox1.Text = "How's it going?";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Location = new System.Drawing.Point((this.Width - this.textBox1.Width) / 2, (this.Height - this.textBox1.Height) / 2);
+            this.Controls.Add(this.textBox1);
+            //Text box 1 end
+            //Button 1 start
+            this.button1 = new System.Windows.Forms.Button();
+            this.button1.Text = "Boop!";
+            this.button1.Click += new System.EventHandler(Boop);
+            Controls.Add(this.button1);
+        }
+
+        //Button 1 function
+        private void Boop(object sender, System.EventArgs eventArgs)
+        {
+            Random randomLocation = new Random();
+
+            this.textBox1.Location = new System.Drawing.Point(randomLocation.Next(200, 300), randomLocation.Next(200,300));
         }
 
         #endregion
