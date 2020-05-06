@@ -13,6 +13,7 @@ namespace src
     public partial class Form1 : Form
     {
         private TextBox textBox1;
+        private TextBox textBox2;
         private Button button1;
         public Form1()
         {
