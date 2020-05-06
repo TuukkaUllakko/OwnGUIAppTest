@@ -1,4 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace src
 {
@@ -46,6 +54,17 @@ namespace src
             this.button1.Text = "Boop!";
             this.button1.Click += new System.EventHandler(Boop);
             Controls.Add(this.button1);
+            //Button 1 end
+            //Picture 1 start
+            PictureBox picture1 = new PictureBox
+            {
+                Name = "pictureBox",
+                Size = new Size (200, 200),
+                Location = new Point(50, 50)
+            };
+            Controls.Add(picture1);
+            picture1.ImageLocation = @"Picture\Cheems.jpg";
+            //Picture 1 end
         }
 
         //Button 1 function
@@ -53,8 +72,9 @@ namespace src
         {
             Random randomLocation = new Random();
 
-            this.textBox1.Location = new System.Drawing.Point(randomLocation.Next(200, 300), randomLocation.Next(200,300));
+            this.textBox1.Location = new System.Drawing.Point(randomLocation.Next(100, 500), randomLocation.Next(100, 400));
         }
+        //Button 1 function end
 
         #endregion
     }
